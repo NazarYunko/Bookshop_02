@@ -1,0 +1,12 @@
+.city-form {
+    text-align: left;
+}
+
+.hClass {
+    color: #444;
+}
+
+table > tr, td, th {
+    padding: 10%;
+    margin: 3%;
+}
