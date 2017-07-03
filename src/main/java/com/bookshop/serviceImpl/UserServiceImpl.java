@@ -31,11 +31,18 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private BCryptPasswordEncoder encoder;
 
     @Override
-    public void save(User user) {
-        user.setRole(Role.ROLE_USER);
-        user.setUuid(UUID.randomUUID().toString());
-        user.setPassword(encoder.encode(user.getPassword()));
-        userDao.save(user);
+    public String save(User user) {
+        if (userDao.findByLogin(user.getLogin()) != null) {
+            return "Login already exist";
+        } else if (userDao.findByEmail(user.getEmail()) != null) {
+            return "Email already exist";
+        } else {
+            user.setRole(Role.ROLE_USER);
+            user.setUuid(UUID.randomUUID().toString());
+            user.setPassword(encoder.encode(user.getPassword()));
+            userDao.save(user);
+            return "200";
+        }
     }
 
     @Override

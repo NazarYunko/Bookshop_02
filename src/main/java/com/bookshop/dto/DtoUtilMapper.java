@@ -103,7 +103,7 @@ public class DtoUtilMapper {
     }
 
     public static UserDto getUserDto(User user) {
-        return new UserDto(user.getId(), user.getLogin(), user.getEmail(), user.getName(), user.getLastName());
+        return new UserDto(user.getId(), user.getLogin(), user.getEmail());
     }
 
     public static List<UserDto> getUsersDto(List<User> users) {

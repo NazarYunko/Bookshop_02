@@ -1,5 +1,7 @@
 package com.bookshop.controller;
 
+import com.bookshop.dto.DtoUtilMapper;
+import com.bookshop.dto.UserDto;
 import com.bookshop.entity.User;
 import com.bookshop.service.CityService;
 import com.bookshop.service.MailSenderService;
@@ -9,20 +11,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.UUID;
 
 /**
  * Created by Nazar on 05.06.2017.
  */
 
-// перевырку на реэстрацыю
+// реєстрацію доробити
 @Controller
 public class UserController {
 
@@ -40,17 +40,16 @@ public class UserController {
         return "views-user-signUp";
     }
 
-    @PostMapping("/signup")
-    public String signUp(@RequestParam String name,
-                         @RequestParam String email,
-                         @RequestParam String password) {
-
-        User user = new User(name, email, password);
-        userService.save(user);
-        String theme = "Thank's for registration!";
-        String mailBody = "Confirm: http://localhost:8080/confirm/" + user.getUuid();
-        mailSenderService.sendEmail(theme, mailBody, user.getEmail());
-        return "redirect:/";
+    @PostMapping("/signUp")
+    public @ResponseBody String signUp(@RequestBody User user) {
+        String response = userService.save(user);
+        System.out.println(response);
+        if (response == "200") {
+            String theme = "Thank's for registration!";
+            String mailBody = "Confirm: http://localhost:8080/confirm/" + user.getUuid();
+            mailSenderService.sendEmail(theme, mailBody, user.getEmail());
+        }
+        return response;
     }
 
     @GetMapping("/confirm/{uuid}")

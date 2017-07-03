@@ -24,11 +24,6 @@ public class User implements UserDetails {
 
     private String password;
 
-    private String name;
-
-    @Column(name = "last_name")
-    private String lastName;
-
     private boolean enabled;
 
     private String uuid;
@@ -52,14 +47,6 @@ public class User implements UserDetails {
         this.login = login;
         this.email = email;
         this.password = password;
-    }
-
-    public User(String login, String email, String password, String name, String lastName) {
-        this.login = login;
-        this.email = email;
-        this.password = password;
-        this.name = name;
-        this.lastName = lastName;
     }
 
     public int getId() {
@@ -92,22 +79,6 @@ public class User implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public void setEnabled(boolean enabled) {

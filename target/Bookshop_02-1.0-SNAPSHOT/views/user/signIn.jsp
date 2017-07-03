@@ -14,15 +14,14 @@
 <form:form action="/login" method="post">
     <div class="form-group">
         <div class="title">Sign in</div>
-        <h5 style="color: red; text-align: center">${userException}</h5>
-        <br>
-        <input name="username" class="form-control" type="text" placeholder="Login or email">
-        <br>
-        <input name="password" class="form-control" type="password" placeholder="Password">
-        <br>
         <center>
-            <button style="text-align: center" class="btn btn-default btn-md">Log In</button>
+            <h5 style="color: red; text-align: center">${userException}</h5>
         </center>
+        <input name="username" id="userName" class="form-control" type="text" placeholder="Login or email" required>
+        <br>
+        <input name="password" id="password" class="form-control" type="password" placeholder="Password" required>
+        <br>
+        <button style="text-align: center" class="btn btn-primary btn-block">Sign in</button>
     </div>
     <div style="text-align: center;">
         <p class="message">Not registered? <a class="message" href="/signup">Create an account</a></p>

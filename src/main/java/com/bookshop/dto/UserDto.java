@@ -11,19 +11,13 @@ public class UserDto {
 
     private String email;
 
-    private String name;
-
-    private String lastName;
-
     public UserDto() {
     }
 
-    public UserDto(int id, String login, String email, String name, String lastName) {
+    public UserDto(int id, String login, String email) {
         this.id = id;
         this.login = login;
         this.email = email;
-        this.name = name;
-        this.lastName = lastName;
     }
 
     public int getId() {
@@ -50,19 +44,4 @@ public class UserDto {
         this.email = email;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }
