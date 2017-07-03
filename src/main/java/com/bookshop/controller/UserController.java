@@ -35,21 +35,23 @@ public class UserController {
     @Autowired
     private OrdersService ordersService;
 
+    @GetMapping("/findUsers")
+    public @ResponseBody List<UserDto> findAllUsers() {
+        return DtoUtilMapper.getUsersDto(userService.findAll());
+    }
+
     @GetMapping("/signup")
     public String signUp() {
         return "views-user-signUp";
     }
 
-    @PostMapping("/signUp")
+    @PostMapping("/save")
     public @ResponseBody String signUp(@RequestBody User user) {
-        String response = userService.save(user);
-        System.out.println(response);
-        if (response == "200") {
-            String theme = "Thank's for registration!";
-            String mailBody = "Confirm: http://localhost:8080/confirm/" + user.getUuid();
-            mailSenderService.sendEmail(theme, mailBody, user.getEmail());
-        }
-        return response;
+        userService.save(user);
+        String theme = "Thank's for registration!";
+        String mailBody = "Confirm: http://localhost:8080/confirm/" + user.getUuid();
+        mailSenderService.sendEmail(theme, mailBody, user.getEmail());
+        return "200";
     }
 
     @GetMapping("/confirm/{uuid}")
@@ -67,7 +69,7 @@ public class UserController {
 
     @PostMapping("/failurelogin")
     public String failureLogin(Model model) {
-        model.addAttribute("userException", "Username or password is wrong!");
+        model.addAttribute("userException", "Login or password is wrong!");
         return "views-user-signIn";
     }
 
