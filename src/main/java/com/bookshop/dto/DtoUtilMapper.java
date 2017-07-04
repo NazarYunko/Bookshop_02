@@ -91,10 +91,10 @@ public class DtoUtilMapper {
     }
 
     public static PublisherDto getPublisherDto(Publisher publisher) {
-        return new PublisherDto(publisher.getId(), publisher.getName(), publisher.getPathImage());
+        return new PublisherDto(publisher.getId(), publisher.getName());
     }
 
-    public List<PublisherDto> getPublisherDto(List<Publisher> publishers) {
+    public static List<PublisherDto> getPublishersDto(List<Publisher> publishers) {
         List<PublisherDto> publishersDto = new ArrayList<>();
         for (Publisher currentPublisher : publishers) {
             publishersDto.add(getPublisherDto(currentPublisher));

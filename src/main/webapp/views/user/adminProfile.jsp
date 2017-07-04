@@ -7,8 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <a href="/genres">Genres</a>
-<a href="countries">Coutnries</a>
-<a href="cities">Cities</a>
+<a href="/countries">Countries</a>
+<a href="/cities">Cities</a>
 <a href="/addauthor">Add author</a>
 <a href="/addbook">Add book</a>
-<a href="/addpublisher">Add publisher</a>
+<a href="/publishers">Add publisher</a>

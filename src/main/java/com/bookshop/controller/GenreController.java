@@ -23,7 +23,7 @@ public class GenreController {
     private GenreService genreService;
 
     @PostMapping
-    public boolean save(@RequestBody Genre genre) {
+    public boolean saveGenre(@RequestBody Genre genre) {
         return genreService.save(genre);
     }
 
@@ -33,8 +33,9 @@ public class GenreController {
     }
 
     @DeleteMapping
-    public void deleteGenre(@RequestBody String genreId) {
+    public String deleteGenre(@RequestBody String genreId) {
         genreService.delete(Integer.parseInt(genreId));
+        return "200";
     }
 
     @PutMapping

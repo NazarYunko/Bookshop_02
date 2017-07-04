@@ -9,15 +9,12 @@ public class PublisherDto {
 
     private String name;
 
-    private String pathImage;
-
     public PublisherDto() {
     }
 
-    public PublisherDto(int id, String name, String pathImage) {
+    public PublisherDto(int id, String name) {
         this.id = id;
         this.name = name;
-        this.pathImage = pathImage;
     }
 
     public int getId() {
@@ -34,13 +31,5 @@ public class PublisherDto {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPathImage() {
-        return pathImage;
-    }
-
-    public void setPathImage(String pathImage) {
-        this.pathImage = pathImage;
     }
 }

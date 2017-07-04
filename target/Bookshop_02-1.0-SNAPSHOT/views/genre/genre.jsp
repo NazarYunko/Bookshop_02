@@ -44,4 +44,4 @@
 <input type="hidden" name="csrf_value"
        value="${_csrf.token}"/>
 
-<script type="text/javascript" src="/js/genre/genre.js"></script>
+<script type="text/javascript" src="/js/genre.js"></script>

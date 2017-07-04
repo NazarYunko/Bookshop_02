@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface PublisherService {
 
-    void save(Publisher publisher, MultipartFile image);
+    boolean save(Publisher publisher);
 
     List<Publisher> findAll();
 
@@ -18,7 +18,7 @@ public interface PublisherService {
 
     void delete(int id);
 
-    void update(Publisher publisher, MultipartFile image);
+    boolean update(Publisher publisher);
 
     Publisher findByName(String name);
 }

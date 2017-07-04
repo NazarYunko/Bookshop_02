@@ -17,7 +17,7 @@
         <center>
             <h4 class="hClass" id="error"></h4>
         </center>
-        <input class="form-control" id="login" name="name" type="text" placeholder="Login" required>
+        <input class="form-control" id="login" name="name" type="text" placeholder="Login" minlength="4" required>
         <br>
         <input class="form-control" id="email" name="email" type="email" placeholder="Email" required>
         <br>
@@ -36,4 +36,4 @@
        value="${_csrf.token}"/>
 
 
-<script type="text/javascript" src="/js/user/user.js"></script>
+<script type="text/javascript" src="/js/user.js"></script>

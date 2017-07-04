@@ -18,8 +18,6 @@ public class Publisher {
 
     private String name;
 
-    private String pathImage;
-
     @OneToMany(mappedBy = "publisher")
     private List<Book> books = new ArrayList<>();
 
@@ -44,14 +42,6 @@ public class Publisher {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPathImage() {
-        return pathImage;
-    }
-
-    public void setPathImage(String pathImage) {
-        this.pathImage = pathImage;
     }
 
     public List<Book> getBooks() {

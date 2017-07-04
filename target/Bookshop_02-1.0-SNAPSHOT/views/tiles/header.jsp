@@ -13,7 +13,6 @@
             <ul class="nav navbar-nav">
                 <li><a href="/books">Books</a></li>
                 <li><a href="/authors">Authors</a></li>
-                <li><a href="/publishers">Publishers</a></li>
             </ul>
             <form class="navbar-form navbar-left">
                 <div class="form-group">

@@ -24,7 +24,7 @@ public class CountryController {
     private CountryService countryService;
 
     @PostMapping
-    public boolean addCountry(@RequestBody Country country) {
+    public boolean saveCountry(@RequestBody Country country) {
         return countryService.save(country);
     }
 
@@ -34,8 +34,9 @@ public class CountryController {
     }
 
     @DeleteMapping
-    public void deleteCountry(@RequestBody String cityId) {
+    public String deleteCountry(@RequestBody String cityId) {
         countryService.delete(Integer.parseInt(cityId));
+        return "200";
     }
 
     @PutMapping

@@ -25,8 +25,8 @@
         <security:intercept-url pattern="/countries" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/genres" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/genre"  access="hasRole('ROLE_ADMIN')"/>
-        <security:intercept-url pattern="/addpublisher"  access="hasRole('ROLE_ADMIN')"/>
-        <security:intercept-url pattern="/updatepublisher/{id}"  access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/publisher"  access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/publishers"  access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/logout" access="hasAnyRole('ROLE_ADMIN' , 'ROLE_USER')"/>
         <security:intercept-url pattern="/profile" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')"/>
         <security:intercept-url pattern="/profile/edit" access="hasAnyRole('ROLE_USER')"/>

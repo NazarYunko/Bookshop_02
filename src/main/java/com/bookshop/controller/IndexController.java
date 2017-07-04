@@ -26,7 +26,12 @@ public class IndexController {
     }
 
     @GetMapping("/genres")
-    public String genres(){
+    public String genres() {
         return "views-genre-genre";
+    }
+
+    @GetMapping("/publishers")
+    public String publisher() {
+        return "views-publisher-publisher";
     }
 }

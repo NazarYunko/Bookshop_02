@@ -2,27 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fde3da82-baf3-4802-9e33-5404de47e640" name="Default" comment="user registration fix">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/user/user.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/user/signin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/css/user/signup.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/publisher.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/css/user/signin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/css/user/signup.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/UserController.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/service/UserService.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/serviceImpl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/serviceImpl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/serviceImpl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/serviceImpl/UserServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/publisher.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/views/publisher/publisher.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/publisher/addPublisher.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/publisher/allPublishers.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/publisher/publisherInfo.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/views/publisher/updatePublisher.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/js/country/country.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/js/genre/genre.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/publisher/addPublisher.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/publisher/allPublishers.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/publisher/publisherInfo.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/publisher/updatePublisher.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/CountryController.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/CountryController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/GenreController.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/GenreController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/PublisherController.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/controller/PublisherController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/dao/PublisherDao.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/dao/PublisherDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/dto/DtoUtilMapper.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/dto/DtoUtilMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/dto/PublisherDto.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/dto/PublisherDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/entity/Publisher.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/entity/Publisher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/service/PublisherService.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/service/PublisherService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/serviceImpl/PublisherServiceImpl.class" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/classes/com/bookshop/serviceImpl/PublisherServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CountryController.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/CountryController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/GenreController.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/GenreController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/IndexController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/controller/PublisherController.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/controller/PublisherController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dao/PublisherDao.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dao/PublisherDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dto/DtoUtilMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dto/DtoUtilMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/dto/PublisherDto.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/dto/PublisherDto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Publisher.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/entity/Publisher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/service/PublisherService.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/service/PublisherService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bookshop/serviceImpl/PublisherServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bookshop/serviceImpl/PublisherServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/user/user.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/user/signIn.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/signIn.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/GenreController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/GenreController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/PublisherController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/controller/PublisherController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/PublisherDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dao/PublisherDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/dto/DtoUtilMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dto/DtoUtilMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/dto/PublisherDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/dto/PublisherDto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Publisher.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Publisher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/service/PublisherService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/service/PublisherService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/PublisherServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/PublisherServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/publisher/publisher.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/publisher/publisher.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/country/country.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/country/country.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/genre/genre.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/genre/genre.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/user/adminProfile.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/adminProfile.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/user/signUp.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/user/signUp.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/user/signIn.jsp" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/user/signIn.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/security.xml" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/WEB-INF/security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/css/publisher/publisher.css" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/css/publisher/publisher.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/country/country.jsp" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/country/country.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/genre/genre.jsp" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/genre/genre.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/tiles/header.jsp" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/tiles/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/user/adminProfile.jsp" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/user/adminProfile.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/user/signUp.jsp" afterPath="$PROJECT_DIR$/target/Bookshop_02-1.0-SNAPSHOT/views/user/signUp.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/country/country.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/country.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/genre/genre.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/genre.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/js/user/user.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -79,10 +118,10 @@
         <option value="FxmlFile" />
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,11 +132,14 @@
       <find>exist</find>
       <find>findOrdersAndBook</find>
       <find>saveCountryBtn</find>
+      <find>countryDao</find>
+      <find>country</find>
     </findStrings>
     <replaceStrings>
       <replace>Update</replace>
       <replace>id</replace>
       <replace>bookExist</replace>
+      <replace>publisherDao</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -111,17 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/PublisherController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/author/addAuthor.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/author/updateAuthor.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/book/addBook.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/book/updateBook.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/publisher/addPublisher.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/publisher/updatePublisher.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/CityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/footer/footer.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CityController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/main-container/main-container.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/country/country.css" />
@@ -131,29 +162,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Country.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/country/addCountry.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/service/CountryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dao/CountryDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/CountryServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dao/GenreDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/genre/genre.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/country/country.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/genre/genre.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/service/GenreService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/GenreServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/country/country.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/GenreController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/genre/genre.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/user/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/adminProfile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dto/UserDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dto/DtoUtilMapper.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/user/signin.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/publisher.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/user/signup.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/user/user.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/service/UserService.java" />
@@ -162,6 +186,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/user/user.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/user/signUp.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/publisher/publisher.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/publisher/addPublisher.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dto/PublisherFormDataDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dto/PublisherDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/entity/Publisher.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dto/DtoUtilMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/service/PublisherService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/dao/PublisherDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/PublisherServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/GenreController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bookshop/controller/PublisherController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/user/adminProfile.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/views/publisher/publisher.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/publisher.js" />
       </list>
     </option>
   </component>
@@ -324,204 +366,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="country" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="genre" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="country" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bookshop_02" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -567,17 +411,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\yunko\Bookshop_02\src\main\webapp\views\user" />
-      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\bootstrap\js" />
-      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\jQuery" />
-      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\bootstrap" />
-      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\js\header" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\bootstrap\css" />
       <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\bootstrap" />
       <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\java\com\bookshop\validator\AuthorValidator\UpdateAuthorValidator" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\NAzaR\Bookshop_02\src\main\webapp\js" />
+      <recent name="D:\yunko\Bookshop_02\src\main\webapp\views\user" />
+      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\bootstrap\js" />
+      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\jQuery" />
+      <recent name="D:\NAzaR\IntelliJ IDEA\Bookshop_02\src\main\webapp\bootstrap" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1253,7 +1097,7 @@
       <workItem from="1498914408465" duration="13530000" />
       <workItem from="1498975180360" duration="8316000" />
       <workItem from="1499076443771" duration="3407000" />
-      <workItem from="1499083495450" duration="11983000" />
+      <workItem from="1499083495450" duration="33547000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1499095698335</created>
@@ -1262,11 +1106,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499095698335</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="user registration fix">
+      <created>1499109309012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1499109309013</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="448338000" />
+    <option name="totallyTimeSpent" value="469902000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1295,18 +1146,19 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3139932" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24744028" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2337884" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24110033" sideWeight="0.50793654" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30339807" sideWeight="0.48091602" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30339807" sideWeight="0.48091602" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24110033" sideWeight="0.50793654" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24514563" sideWeight="0.519084" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1166,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1402,80 +1253,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/CityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/book/bookInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/template.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main-container/main-container.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/country/country.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-          <folding>
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1231#1232#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/entity/Publisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/dto/CountryDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/BookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/entity/Country.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -1521,13 +1298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/CountryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/GenreServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1550,53 +1320,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <element signature="e#652#653#0" expanded="false" />
-            <element signature="e#694#695#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/genre/genre.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1231#1232#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/GenreController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-          <folding>
-            <element signature="e#648#649#0" expanded="false" />
-            <element signature="e#695#696#0" expanded="false" />
-            <element signature="e#756#757#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#970#971#0" expanded="false" />
-            <element signature="e#1046#1047#0" expanded="false" />
-            <element signature="e#1095#1096#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/genre/genre.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/genre.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
           <caret line="134" column="35" lean-forward="true" selection-start-line="134" selection-start-column="35" selection-end-line="134" selection-end-column="35" />
@@ -1610,14 +1334,6 @@
           <folding>
             <element signature="e#565#589#0#HTML" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1646,29 +1362,6 @@
             <Category>Key columns</Category>
           </Categories>
           <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/adminProfile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/publisher/addPublisher.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="38" column="60" lean-forward="false" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1708,28 +1401,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/country/country.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/country/country.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/publisher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/user/signin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1754,46 +1425,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/dto/DtoUtilMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="105" column="73" lean-forward="false" selection-start-line="105" selection-start-column="73" selection-end-line="105" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/signIn.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="37" column="27" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/signUp.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="103" lean-forward="false" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding>
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1805,11 +1441,236 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user/user.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/signIn.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/signUp.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="19" column="103" lean-forward="false" selection-start-line="19" selection-start-column="103" selection-end-line="19" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/genre/genre.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/country/country.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/publisher/publisher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/dto/PublisherFormDataDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/entity/Publisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="57" column="66" lean-forward="true" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/dto/PublisherDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/dto/DtoUtilMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="96" column="18" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/service/PublisherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/dao/PublisherDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/CountryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="59" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/serviceImpl/PublisherServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/GenreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/CountryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="26" column="30" lean-forward="false" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/tiles/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/user/adminProfile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/country/country.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bookshop/controller/PublisherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+          <folding>
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/publisher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2862">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/country.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="156" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/publisher/publisher.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

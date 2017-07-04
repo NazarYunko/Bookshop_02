@@ -23,19 +23,13 @@ public class PublisherServiceImpl implements PublisherService {
     private PublisherDao publisherDao;
 
     @Override
-    public void save(Publisher publisher, MultipartFile image){
-
-        String path = System.getProperty("catalina.home") + "/resources/" +
-                publisher.getName() + "/" + image.getOriginalFilename();
-
-        publisher.setPathImage("resources/" + publisher.getName() + "/" + image.getOriginalFilename());
-        File filePath = new File(path);
-
-        try {
-            filePath.mkdirs();
-            image.transferTo(filePath);
-        } catch (IOException e) {}
-        publisherDao.save(publisher);
+    public boolean save(Publisher publisher){
+        if(publisherDao.findByName(publisher.getName()) == null) {
+            publisherDao.save(publisher);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -54,22 +48,17 @@ public class PublisherServiceImpl implements PublisherService {
     }
 
     @Override
-    public void update(Publisher publisher, MultipartFile image){
-        String path = System.getProperty("catalina.home") + "/resources/" +
-                publisher.getName() + "/" + image.getOriginalFilename();
-        publisher.setPathImage("resources/" + publisher.getName() + "/" + image.getOriginalFilename());
-        File filePath = new File(path);
-        try {
-            filePath.mkdirs();
-            try {
-                FileUtils.cleanDirectory(new File(System.getProperty("catalina.home") + "/resources/" +
-                        publisher.getName() + "/" ));
-            } catch (IOException e){
-                System.out.println("error");
-            }
-            image.transferTo(filePath);
-        } catch (IOException e) {}
-        publisherDao.save(publisher);
+    public boolean update(Publisher publisher){
+        if (publisherDao.findByIdAndName(publisher.getId(), publisher.getName()) != null) {
+            publisherDao.save(publisher);
+            return true;
+        }
+        if (publisherDao.findByName(publisher.getName()) == null) {
+            publisherDao.save(publisher);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

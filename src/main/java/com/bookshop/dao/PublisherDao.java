@@ -10,4 +10,6 @@ public interface PublisherDao extends JpaRepository<Publisher, Integer> {
 
     Publisher findByName(String name);
 
+    Publisher findByIdAndName(int id, String name);
+
 }

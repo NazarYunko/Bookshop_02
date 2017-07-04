@@ -36,4 +36,4 @@
        value="${_csrf.token}"/>
 
 
-<script type="text/javascript" src="/js/user/user.js"></script>
+<script type="text/javascript" src="/js/user.js"></script>
