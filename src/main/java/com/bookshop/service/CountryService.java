@@ -24,4 +24,7 @@ public interface CountryService {
 
     Country findCountryWithCities(int id);
 
+    List<Country> findAllSortedCountries();
+
+
 }

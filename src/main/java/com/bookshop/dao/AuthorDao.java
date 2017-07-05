@@ -14,7 +14,9 @@ import java.time.LocalDate;
  */
 public interface AuthorDao extends JpaRepository<Author, Integer>{
 
-    Author findByNameAndLastNameAndCityAndDateOfBirth(String name, String lastName, City city, LocalDate dateOfBirth);
+    Author findByNameAndLastName(String name, String lastName);
+
+    Author findByIdAndNameAndLastName(int id, String name, String lastName);
 
     @Query("select a from Author a left join fetch a.books where a.id=:id")
     Author findAuthorWithBooks(@Param("id") int id);

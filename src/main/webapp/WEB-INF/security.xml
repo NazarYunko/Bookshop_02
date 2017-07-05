@@ -19,8 +19,8 @@
         <security:intercept-url pattern="/updateauthor/{id}" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/addbook" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/updatebook/{id}" access="hasRole('ROLE_ADMIN')"/>
-        <security:intercept-url pattern="/addcity" access="hasRole('ROLE_ADMIN')"/>
-        <security:intercept-url pattern="/updatecity/{id}" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/city" access="hasRole('ROLE_ADMIN')"/>
+        <security:intercept-url pattern="/cities" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/country" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/countries" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/genres" access="hasRole('ROLE_ADMIN')"/>

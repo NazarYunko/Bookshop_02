@@ -3,13 +3,9 @@ package com.bookshop.serviceImpl;
 import com.bookshop.dao.CountryDao;
 import com.bookshop.entity.Country;
 import com.bookshop.service.CountryService;
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -69,4 +65,10 @@ public class CountryServiceImpl implements CountryService {
     public Country findCountryWithCities(int id) {
         return countryDao.findCountryWithCities(id);
     }
+
+    @Override
+    public List<Country> findAllSortedCountries() {
+        return countryDao.findAllSortedCountries();
+    }
+
 }

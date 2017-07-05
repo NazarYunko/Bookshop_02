@@ -1,5 +1,9 @@
 package com.bookshop.entity;
 
+
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +22,7 @@ public class Country {
 
 
     @OneToMany(mappedBy = "country")
+    @JsonIgnore
     private List<City> cities = new ArrayList();
 
     public Country() {
@@ -43,6 +48,7 @@ public class Country {
         this.name = name;
     }
 
+    @JsonIgnore
     public List<City> getCities() {
         return cities;
     }

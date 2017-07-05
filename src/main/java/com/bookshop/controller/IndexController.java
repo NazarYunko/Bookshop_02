@@ -25,6 +25,11 @@ public class IndexController {
         return "views-country-country";
     }
 
+    @GetMapping("/cities")
+    public String cities() {
+        return "views-city-city";
+    }
+
     @GetMapping("/genres")
     public String genres() {
         return "views-genre-genre";

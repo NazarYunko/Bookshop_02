@@ -30,7 +30,7 @@ public class CountryController {
 
     @GetMapping
     public List<CountryDto> findAllCountries() {
-        return DtoUtilMapper.getCountriesDto(countryService.findAll());
+        return DtoUtilMapper.getCountriesDto(countryService.findAllSortedCountries());
     }
 
     @DeleteMapping

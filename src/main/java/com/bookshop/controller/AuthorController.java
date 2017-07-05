@@ -1,18 +1,18 @@
 package com.bookshop.controller;
 
+import com.bookshop.dto.AuthorDto;
+import com.bookshop.dto.DtoUtilMapper;
 import com.bookshop.entity.Author;
 import com.bookshop.service.AuthorService;
 import com.bookshop.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Created by Nazar on 09.06.2017.
@@ -30,6 +30,12 @@ public class AuthorController {
     public String addAuthor(Model model) {
         model.addAttribute("cities", cityService.findAll());
         return "views-author-addAuthor";
+    }
+
+    @GetMapping("/getAuthors")
+    @ResponseBody
+    public List<AuthorDto> getAllAuthors(){
+        return DtoUtilMapper.getNotFullAuthorsDto(authorService.findAll());
     }
 
     @PostMapping("/addauthor")

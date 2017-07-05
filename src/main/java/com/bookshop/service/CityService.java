@@ -1,6 +1,7 @@
 package com.bookshop.service;
 
 import com.bookshop.entity.City;
+import com.bookshop.entity.Country;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface CityService {
 
-    void save(City city);
+    boolean save(City city);
 
     List<City> findAll();
 
@@ -17,8 +18,11 @@ public interface CityService {
 
     void delete(int id);
 
-    void update(City city);
+    boolean update(City city);
 
     City findByName(String name);
 
+    List<City> findAllSortedCities();
+
+    List<City> findByCountry(Country country);
 }
