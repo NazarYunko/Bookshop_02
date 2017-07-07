@@ -90,4 +90,22 @@ public class BookServiceImpl implements BookService {
             return false;
         }
     }
+
+    @Override
+    public boolean findByIdAndName(int id, String name) {
+        if (bookDao.findByIdAndName(id, name) != null) {
+            return true;
+        }
+
+        if (bookDao.findByName(name) == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public Book findBookByName(String name) {
+        return bookDao.findByName(name);
+    }
 }

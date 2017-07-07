@@ -18,7 +18,7 @@ public class Genre {
 
     private String name;
 
-    @OneToMany(mappedBy = "genre")
+    @OneToMany(mappedBy = "genre", cascade = CascadeType.DETACH)
     private List<Book> books = new ArrayList<>();
 
     public Genre() {

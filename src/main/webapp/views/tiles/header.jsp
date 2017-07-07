@@ -14,11 +14,15 @@
                 <li><a href="/books">Books</a></li>
                 <li><a href="/authors">Authors</a></li>
             </ul>
-            <form class="navbar-form navbar-left">
+            <form action="/search?${_csrf.parameterName}=${_csrf.token}" class="navbar-form navbar-left" id="searchForm" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search books...">
+                    <input type="text" name="search" id="search" class="form-control" placeholder="Search books...">
+                    <input type="hidden" name="csrf_name"
+                           value="${_csrf.parameterName}"/>
+                    <input type="hidden" name="csrf_value"
+                           value="${_csrf.token}"/>
                 </div>
-                <button type="button" class="btn btn-default btn-sm">
+                <button class="btn btn-default btn-sm">
                     <span class="glyphicon glyphicon-search"></span> Search
                 </button>
             </form>

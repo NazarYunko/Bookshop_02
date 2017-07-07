@@ -20,6 +20,7 @@
         <br>
         <p style="color: red; font-size: 16px;" id="error"></p>
         <div class="form-group size">
+            <input type="hidden" value="${currentAuthor.id}" id="authorId">
             <input type="text" class="form-control" id="authorName" name="name" placeholder="Author name..." oninput="checkField('#authorName')" value="${currentAuthor.name}">
         </div>
         <div class="form-group size">

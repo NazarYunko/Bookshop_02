@@ -83,7 +83,9 @@ public class AuthorServiceImpl implements AuthorService {
     public boolean updateAuthorValidation(Author author) {
         if (authorDao.findByIdAndNameAndLastName(author.getId(), author.getName(), author.getLastName()) != null) {
             return true;
-        } else if (authorDao.findByNameAndLastName(author.getName(), author.getLastName()) == null) {
+        }
+
+        if (authorDao.findByNameAndLastName(author.getName(), author.getLastName()) == null) {
             return true;
         } else {
             return false;

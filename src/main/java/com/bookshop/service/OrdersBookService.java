@@ -22,5 +22,4 @@ public interface OrdersBookService {
 
     void delete(OrdersBookId ordersBookId);
 
-    OrdersBook findOrdersAndBook(Orders orders, Book book);
 }

@@ -57,6 +57,7 @@ $('#updateAuthorForm').submit(function (event) {
         image.css('background', 'rgba(151, 22, 28, 0.15)');
     } else {
         var authorSend = {
+            id: $('#authorId').val(),
             name: $('#authorName').val(),
             lastName: $('#authorLastName').val()
         };

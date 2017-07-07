@@ -1,6 +1,7 @@
 package com.bookshop.serviceImpl;
 
 import com.bookshop.dao.OrdersBookDao;
+import com.bookshop.dao.OrdersDao;
 import com.bookshop.entity.Book;
 import com.bookshop.entity.Orders;
 import com.bookshop.entity.OrdersBook;
@@ -19,6 +20,9 @@ public class OrdersBookServiceImpl implements OrdersBookService{
 
     @Autowired
     private OrdersBookDao ordersBookDao;
+
+    @Autowired
+    private OrdersDao ordersDao;
 
     @Override
     public void save(OrdersBook ordersBook) {
@@ -42,11 +46,12 @@ public class OrdersBookServiceImpl implements OrdersBookService{
 
     @Override
     public void delete(OrdersBookId ordersBookId) {
+        Orders orders = ordersDao.findOne(ordersBookId.getOrders().getId());
+        OrdersBook ordersBook = ordersBookDao.findOne(ordersBookId);
+        orders.setSum(orders.getSum() - (ordersBookId.getBook().getPrice() * ordersBook.getQuantityBooksToBuy()));
+        ordersDao.save(orders);
+        ordersBookDao.save(ordersBook);
         ordersBookDao.delete(ordersBookId);
     }
 
-    @Override
-    public OrdersBook findOrdersAndBook(Orders orders, Book book) {
-        return ordersBookDao.findOrdersAndBook(orders, book);
-    }
 }

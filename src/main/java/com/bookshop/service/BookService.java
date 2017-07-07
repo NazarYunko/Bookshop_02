@@ -24,4 +24,7 @@ public interface BookService {
 
     boolean findByName(String name);
 
+    Book findBookByName(String name);
+
+    boolean findByIdAndName(int id, String name);
 }

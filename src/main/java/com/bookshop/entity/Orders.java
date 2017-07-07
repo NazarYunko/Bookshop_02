@@ -23,7 +23,7 @@ public class Orders {
 
     private double sum;
 
-    @OneToMany(mappedBy = "id.orders")
+    @OneToMany(mappedBy = "id.orders", cascade = CascadeType.REMOVE)
     private List<OrdersBook> ordersBooks = new ArrayList<>();
 
     public Orders() {

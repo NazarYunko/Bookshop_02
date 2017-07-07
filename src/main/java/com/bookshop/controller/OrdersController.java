@@ -34,8 +34,8 @@ public class OrdersController {
 
     @PostMapping("/books/{id}")
     public String addToOrder(Principal principal,
-                              @RequestParam int quantity,
-                              @PathVariable int id) {
+                             @RequestParam int quantity,
+                             @PathVariable int id) {
         ordersService.addToOrder(userService.findUserWithOrders(Integer.parseInt(principal.getName())), bookService.findOne(id), quantity);
         return "redirect:/books/{id}";
     }

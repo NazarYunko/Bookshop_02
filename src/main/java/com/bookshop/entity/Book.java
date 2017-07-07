@@ -41,7 +41,7 @@ public class Book {
 
     private String pathImage;
 
-    @OneToMany(mappedBy = "id.book")
+    @OneToMany(mappedBy = "id.book", cascade = CascadeType.DETACH)
     private List<OrdersBook> ordersBooks = new ArrayList<>();
 
     public Book() {

@@ -31,7 +31,7 @@ public class Author {
 
     private String pathImage;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
     private Set<Book> books = new HashSet<>();
 
     public Author() {

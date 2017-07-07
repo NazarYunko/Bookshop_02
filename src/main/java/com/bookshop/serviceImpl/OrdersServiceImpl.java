@@ -20,7 +20,6 @@ import java.util.List;
 /**
  * Created by Nazar on 04.06.2017.
  */
-//ЗРОБИТИ ОРДЕРі додавання в корзину!!!!!!!
 @Service
 public class OrdersServiceImpl implements OrdersService {
 
@@ -65,31 +64,6 @@ public class OrdersServiceImpl implements OrdersService {
     public Orders findWithOrdersBook(int id) {
         return ordersDao.findWithOrdersBook(id);
     }
-
-//    @Override
-//    public Orders findByUser(User user) {
-//        return ordersDao.findByUser(user);
-//    }
-
-//    @Override
-//    public Orders findOrdersWithOrdersBookByUser(User user) {
-//        Orders orders = null;
-//        boolean exist = false;
-//        for (Orders currentOrders : ordersDao.findOrdersWithOrdersBookByUser(user)) {
-//            if (currentOrders.getStatus().equalsIgnoreCase("Order in process")) {
-//                exist = true;
-//                orders = currentOrders;
-//                break;
-//            }
-//        }
-//
-//        if (exist) {
-//            return orders;
-//        } else {
-//            return null;
-//        }
-//
-//    }
 
     @Override
     public Orders findUserOrders(User user) {
@@ -169,5 +143,7 @@ public class OrdersServiceImpl implements OrdersService {
         orders.setStatus("Order is completed");
         ordersDao.save(orders);
     }
+
+
 
 }

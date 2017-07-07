@@ -23,7 +23,7 @@ public class City {
     @ManyToOne
     private Country country;
 
-    @OneToMany(mappedBy = "city")
+    @OneToMany(mappedBy = "city", cascade = CascadeType.DETACH)
     private List<Author> authors = new ArrayList<>();
 
     public City() {

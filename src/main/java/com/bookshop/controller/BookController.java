@@ -1,5 +1,6 @@
 package com.bookshop.controller;
 
+import com.bookshop.dto.DtoUtilMapper;
 import com.bookshop.entity.Book;
 import com.bookshop.service.AuthorService;
 import com.bookshop.service.BookService;
@@ -37,6 +38,13 @@ public class BookController {
         return bookService.findByName(bookName);
     }
 
+    @PostMapping("/findByIdAndName")
+    @ResponseBody
+    public boolean findByIdAndName(@RequestBody Book book) {
+        return bookService.findByIdAndName(book.getId(), book.getName());
+    }
+
+
     @GetMapping("/addbook")
     public String addBook() {
         return "views-book-addBook";
@@ -63,17 +71,17 @@ public class BookController {
 
     @GetMapping("/books")
     public String allBooks(Model model) {
-        model.addAttribute("books", bookService.findAll());
+        model.addAttribute("books", DtoUtilMapper.getNotFullBooksDto(bookService.findAll()));
         return "views-book-allBooks";
     }
 
     @GetMapping("/books/{id}")
     public String bookInfo(@PathVariable int id, Model model) {
-        model.addAttribute("book", bookService.findOne(id));
+        model.addAttribute("book", DtoUtilMapper.getFullBookDto(bookService.findOne(id)));
         return "views-book-bookInfo";
     }
 
-    @GetMapping("/deletebook/{id}")
+    @PostMapping("/deletebook/{id}")
     public String deleteBook(@PathVariable int id) {
         bookService.delete(id);
         return "redirect:/books";
@@ -81,10 +89,7 @@ public class BookController {
 
     @GetMapping("/updatebook/{id}")
     public String updateBook(@PathVariable int id, Model model) {
-        model.addAttribute("currentBook", bookService.findOne(id));
-        model.addAttribute("authors", authorService.findAll());
-        model.addAttribute("genres", genreService.findAll());
-        model.addAttribute("publishers", publisherService.findAll());
+        model.addAttribute("currentBook", DtoUtilMapper.getFullBookDto(bookService.findOne(id)));
         return "views-book-updateBook";
     }
 

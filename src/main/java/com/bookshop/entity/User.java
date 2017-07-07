@@ -31,7 +31,7 @@ public class User implements UserDetails {
     @Enumerated
     private Role role;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.DETACH)
     private List<Orders> orders = new ArrayList<>();
 
     public User() {
