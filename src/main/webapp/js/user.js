@@ -1,4 +1,48 @@
+//sign in validation
+$('#form').submit(function (event) {
+    event.preventDefault();
+
+    var userName = $('#userName');
+    var userNameValue = userName.val();
+
+    var pass = $('#password');
+    var passValue = pass.val();
+
+    if (userNameValue == '') {
+        userName.css('background', 'rgba(151, 22, 28, 0.15)');
+    } else if (passValue == '') {
+        pass.css('background', 'rgba(151, 22, 28, 0.15)');
+    } else {
+        $('#form').unbind('submit').submit();
+    }
+});
+
+function checkField(elem) {
+    if ($(elem).val().length == 1) {
+        $(elem).css('background', 'white');
+    }
+}
+
+//sign up
 function saveUser() {
+
+    var login = $('#login');
+    var loginValue = login.val();
+
+    var email = $('#email');
+    var emailValue = email.val();
+
+    var pass = $('#password');
+    var passValue = pass.val();
+
+    if (loginValue == '') {
+        login.css('background', 'rgba(151, 22, 28, 0.15)');
+    } else if (emailValue == '') {
+        email.css('background', 'rgba(151, 22, 28, 0.15)');
+    } else if (passValue == '') {
+        pass.css('background', 'rgba(151, 22, 28, 0.15)');
+    }
+
     if ($('#login').val() != '' && $('#email').val() != '' && $('#password').val() != '') {
         var user = {
             login: $('#login').val(),

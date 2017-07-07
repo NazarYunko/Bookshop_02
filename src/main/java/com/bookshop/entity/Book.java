@@ -44,11 +44,28 @@ public class Book {
     @OneToMany(mappedBy = "id.book")
     private List<OrdersBook> ordersBooks = new ArrayList<>();
 
-    public Book(String name, Genre one, String description, int countOfPages, Author authorServiceOne, LocalDate parse, Publisher publisherServiceOne, float price, int quantity) {
-
+    public Book() {
     }
 
-    public Book(String name, Genre genre, String description, int countOfPages, Author author, LocalDate dateOfPublication, Publisher publisher, float price, int quantity, String pathImage, List<OrdersBook> ordersBooks) {
+    public Book(String name) {
+        this.name = name;
+    }
+
+    public Book(String name, Author author) {
+        this.name = name;
+        this.author = author;
+    }
+
+    public Book(String name, Author author, float price, String pathImage) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.pathImage = pathImage;
+    }
+
+
+
+    public Book(String name, Genre genre, String description, int countOfPages, Author author, LocalDate dateOfPublication, Publisher publisher, float price, int quantity) {
         this.name = name;
         this.genre = genre;
         this.description = description;
@@ -58,8 +75,6 @@ public class Book {
         this.publisher = publisher;
         this.price = price;
         this.quantity = quantity;
-        this.pathImage = pathImage;
-        this.ordersBooks = ordersBooks;
     }
 
     public int getId() {

@@ -21,4 +21,8 @@ public interface AuthorService {
 
     void update(Author author, MultipartFile image);
 
+    Author findByNameAndLastName(String name, String lastName);
+
+    boolean updateAuthorValidation(Author author);
+
 }

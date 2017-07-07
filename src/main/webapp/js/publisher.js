@@ -1,3 +1,5 @@
+loadPublishers();
+
 function checkField(elem) {
     if ($(elem).val().length == 1) {
         $(elem).css('background', 'white');
@@ -14,7 +16,7 @@ function savePublisher() {
     var nameValue = name.val();
 
     if (nameValue == '') {
-        name.css('background', 'rgba(151, 22, 28, 0.1)');
+        name.css('background', 'rgba(151, 22, 28, 0.15)');
     } else if (nameValue != '') {
         var publisher = {
             name: nameValue
@@ -97,7 +99,7 @@ function saveUpdates(publisherId) {
     var nameValue = name.val();
 
     if (nameValue == '') {
-        name.css('background', 'rgba(151, 22, 28, 0.1)')
+        name.css('background', 'rgba(151, 22, 28, 0.15)')
     }
 
     if (nameValue != '') {
@@ -165,9 +167,6 @@ function deletePublisher(publisherId) {
         }
     })
 }
-
-
-loadPublishers();
 
 function loadPublishers() {
     $.ajax({

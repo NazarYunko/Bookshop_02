@@ -9,7 +9,6 @@ public class CountryDto {
 
     private String name;
 
-
     public CountryDto() {
     }
 

@@ -21,7 +21,7 @@ public class Country {
     private String name;
 
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany(mappedBy = "country", cascade = CascadeType.REMOVE)
     @JsonIgnore
     private List<City> cities = new ArrayList();
 

@@ -17,6 +17,8 @@ public class AuthorDto {
 
     private LocalDate dateOfBirth;
 
+    private CityDto city;
+
     private String biography;
 
     private String pathImage;
@@ -31,11 +33,12 @@ public class AuthorDto {
         this.pathImage = pathImage;
     }
 
-    public AuthorDto(int id, String name, String lastName, LocalDate dateOfBirth, String biography, String pathImage) {
+    public AuthorDto(int id, String name, String lastName, LocalDate dateOfBirth, CityDto city, String biography, String pathImage) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
+        this.city = city;
         this.biography = biography;
         this.pathImage = pathImage;
     }
@@ -70,6 +73,14 @@ public class AuthorDto {
 
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public CityDto getCity() {
+        return city;
+    }
+
+    public void setCity(CityDto cityDto) {
+        this.city = cityDto;
     }
 
     public String getBiography() {

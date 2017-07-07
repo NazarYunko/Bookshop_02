@@ -9,26 +9,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <link rel="stylesheet" href="/css/author/allauthors.css">
-<table>
+<table class="table table-hover table-sm">
     <thead>
     <tr>
-        <th>Author</th>
-        <sec:authorize access="hasRole('ROLE_ADMIN')">
-            <th>Update</th>
-            <th>Delete</th>
-        </sec:authorize>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Last name</th>
     </tr>
     </thead>
     <tbody>
     <c:forEach var="author" items="${authors}">
         <tr>
-            <td><strong><a style="color: black; text-decoration-line: none;"
-                           href="/authors/${author.id}">${author.name} ${author.lastName}</a></strong></td>
-            <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <td><a style="text-decoration-line: none; color: dodgerblue" href="/updateauthor/${author.id}">UPDATE</a></td>
-                <td><a style="text-decoration-line: none; color: red;" href="/deleteauthor/${author.id}"> DELETE</a>
-                </td>
-            </sec:authorize>
+            <td><a href="/authors/${author.id}"><image src="${author.pathImage}" class="img-rounded" width="250" height="325"></image></a></td>
+            <td><strong>${author.name}</strong></td>
+            <td><strong>${author.lastName}</strong></td>
         </tr>
     </c:forEach>
     </tbody>

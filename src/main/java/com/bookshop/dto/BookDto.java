@@ -15,17 +15,17 @@ public class BookDto {
 
     private String name;
 
-    private Genre genre;
+    private GenreDto genre;
 
     private String description;
 
     private int countOfPages;
 
-    private Author author;
+    private AuthorDto author;
 
     private LocalDate dateOfPublication;
 
-    private Publisher publisher;
+    private PublisherDto publisher;
 
     private float price;
 
@@ -36,7 +36,7 @@ public class BookDto {
     public BookDto() {
     }
 
-    public BookDto(int id, String name, Author author, float price, String pathImage) {
+    public BookDto(int id, String name, AuthorDto author, float price, String pathImage) {
         this.id = id;
         this.name = name;
         this.author = author;
@@ -44,7 +44,7 @@ public class BookDto {
         this.pathImage = pathImage;
     }
 
-    public BookDto(int id, String name, Genre genre, String description, int countOfPages, Author author, LocalDate dateOfPublication, Publisher publisher, float price, int quantity, String pathImage) {
+    public BookDto(int id, String name, GenreDto genre, String description, int countOfPages, AuthorDto author, LocalDate dateOfPublication, PublisherDto publisher, float price, int quantity, String pathImage) {
         this.id = id;
         this.name = name;
         this.genre = genre;
@@ -74,11 +74,11 @@ public class BookDto {
         this.name = name;
     }
 
-    public Genre getGenre() {
+    public GenreDto getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(GenreDto genre) {
         this.genre = genre;
     }
 
@@ -98,11 +98,11 @@ public class BookDto {
         this.countOfPages = countOfPages;
     }
 
-    public Author getAuthor() {
+    public AuthorDto getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author author) {
+    public void setAuthor(AuthorDto author) {
         this.author = author;
     }
 
@@ -114,11 +114,11 @@ public class BookDto {
         this.dateOfPublication = dateOfPublication;
     }
 
-    public Publisher getPublisher() {
+    public PublisherDto getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(Publisher publisher) {
+    public void setPublisher(PublisherDto publisher) {
         this.publisher = publisher;
     }
 

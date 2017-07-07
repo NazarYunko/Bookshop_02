@@ -13,7 +13,7 @@ public class OrdersDto {
 
     private int id;
 
-    private User user;
+    private UserDto user;
 
     private String status;
 
@@ -30,7 +30,7 @@ public class OrdersDto {
         this.ordersBooks = ordersBooks;
     }
 
-    public OrdersDto(int id, User user, String status, double sum, List<OrdersBook> ordersBooks) {
+    public OrdersDto(int id, UserDto user, String status, double sum, List<OrdersBook> ordersBooks) {
         this.id = id;
         this.user = user;
         this.status = status;
@@ -46,11 +46,11 @@ public class OrdersDto {
         this.id = id;
     }
 
-    public User getUser() {
+    public UserDto getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserDto user) {
         this.user = user;
     }
 

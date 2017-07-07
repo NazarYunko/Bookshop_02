@@ -17,11 +17,11 @@
         <center>
             <h4 class="hClass" id="error"></h4>
         </center>
-        <input class="form-control" id="login" name="name" type="text" placeholder="Login" minlength="4" required>
+        <input class="form-control" id="login" name="name" type="text" placeholder="Login" minlength="4" oninput="checkField('#login')">
         <br>
-        <input class="form-control" id="email" name="email" type="email" placeholder="Email" required>
+        <input class="form-control" id="email" name="email" type="email" placeholder="Email" oninput="checkField('#email')">
         <br>
-        <input class="form-control" id="password" name="password" type="password" minlength="3" placeholder="Password" required>
+        <input class="form-control" id="password" name="password" type="password" minlength="3" placeholder="Password" oninput="checkField('#password')">
         <br>
         <button id="signUp" class="btn btn-primary btn-block">Sign up</button>
         <br>

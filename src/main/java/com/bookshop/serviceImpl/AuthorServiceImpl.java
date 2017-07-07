@@ -73,4 +73,22 @@ public class AuthorServiceImpl implements AuthorService {
 
         authorDao.save(author);
     }
+
+    @Override
+    public Author findByNameAndLastName(String name, String lastName) {
+        return authorDao.findByNameAndLastName(name, lastName);
+    }
+
+    @Override
+    public boolean updateAuthorValidation(Author author) {
+        if (authorDao.findByIdAndNameAndLastName(author.getId(), author.getName(), author.getLastName()) != null) {
+            return true;
+        } else if (authorDao.findByNameAndLastName(author.getName(), author.getLastName()) == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 }

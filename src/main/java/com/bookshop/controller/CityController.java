@@ -27,7 +27,7 @@ public class CityController {
         return DtoUtilMapper.getCitiesDto(cityService.findAllSortedCities());
     }
 
-    @GetMapping("/findByCountry")
+    @PostMapping("/findByCountry")
     public List<CityDto> findByCountry(@RequestBody String countryId) {
         return DtoUtilMapper.getCitiesDto(cityService.findByCountry(countryService.findOne(Integer.parseInt(countryId))));
     }

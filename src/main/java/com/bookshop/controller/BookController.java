@@ -8,10 +8,7 @@ import com.bookshop.service.PublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
@@ -34,17 +31,19 @@ public class BookController {
     @Autowired
     private PublisherService publisherService;
 
+    @PostMapping("/findByName")
+    @ResponseBody
+    public boolean findByName(@RequestBody String bookName) {
+        return bookService.findByName(bookName);
+    }
+
     @GetMapping("/addbook")
-    public String addBook(Model model) {
-        model.addAttribute("authors", authorService.findAll());
-        model.addAttribute("genres", genreService.findAll());
-        model.addAttribute("publishers", publisherService.findAll());
+    public String addBook() {
         return "views-book-addBook";
     }
 
     @PostMapping("/addbook")
-    public String addBook(Model model,
-                          @RequestParam String name,
+    public String addBook(@RequestParam String name,
                           @RequestParam int genreId,
                           @RequestParam String description,
                           @RequestParam float countOfPages,
@@ -55,8 +54,8 @@ public class BookController {
                           @RequestParam float price,
                           @RequestParam MultipartFile image) {
 
-
-        bookService.save(new Book(name, genreService.findOne(genreId), description, ((int) countOfPages), authorService.findOne(authorId), LocalDate.parse(dateOfPublication),
+        bookService.save(new Book(name, genreService.findOne(genreId),
+                description, ((int) countOfPages), authorService.findOne(authorId), LocalDate.parse(dateOfPublication),
                 publisherService.findOne(publisherId), price, ((int) quantity)), image);
 
         return "redirect:/books";
@@ -90,8 +89,7 @@ public class BookController {
     }
 
     @PostMapping("/updatebook/{id}")
-    public String updateBook(Model model,
-                             @PathVariable int id,
+    public String updateBook(@PathVariable int id,
                              @RequestParam String name,
                              @RequestParam int genreId,
                              @RequestParam String description,
@@ -102,8 +100,6 @@ public class BookController {
                              @RequestParam float quantity,
                              @RequestParam float price,
                              @RequestParam MultipartFile image) {
-
-
         Book book = bookService.findOne(id);
         book.setName(name);
         book.setGenre(genreService.findOne(genreId));

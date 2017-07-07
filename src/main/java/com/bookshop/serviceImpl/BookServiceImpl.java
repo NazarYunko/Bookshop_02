@@ -1,6 +1,7 @@
 package com.bookshop.serviceImpl;
 
 import com.bookshop.dao.BookDao;
+import com.bookshop.entity.Author;
 import com.bookshop.entity.Book;
 import com.bookshop.service.BookService;
 import org.apache.commons.io.FileUtils;
@@ -81,4 +82,12 @@ public class BookServiceImpl implements BookService {
         bookDao.save(book);
     }
 
+    @Override
+    public boolean findByName(String name) {
+        if (bookDao.findByName(name) == null) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

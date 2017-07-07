@@ -1,4 +1,6 @@
-//make update and save
+loadCountries();
+loadCities();
+
 function checkField(elem) {
     if ($(elem).val().length == 1) {
         $(elem).css('background', 'white');
@@ -15,10 +17,15 @@ function saveCity() {
     var nameValue = name.val();
 
     if (nameValue == '') {
-        name.css('background', 'rgba(151, 22, 28, 0.1)')
+        name.css('background', 'rgba(151, 22, 28, 0.15)');
     }
 
-    if (nameValue != '') {
+    if ($('#countries').has('option').length == 0) {
+        $('#countries').css('background', 'rgba(151, 22, 28, 0.15)');
+        $('#error').html('Add countries!');
+    }
+
+    if (nameValue != '' && $('#countries').has('option').length > 0) {
 
         var select = document.getElementById('countries');
         var selected = select.options[select.selectedIndex];
@@ -133,7 +140,7 @@ function saveUpdates(cityId) {
     var selected = select.options[select.selectedIndex];
 
     if (nameValue == '') {
-        name.css('background', 'rgba(151, 22, 28, 0.1)')
+        name.css('background', 'rgba(151, 22, 28, 0.15)')
     }
 
     if (nameValue != '') {
@@ -210,7 +217,6 @@ function deleteCity(cityId) {
     })
 }
 
-loadCities();
 function loadCities() {
 
     $.ajax({
@@ -234,8 +240,6 @@ function parseCitiesFromDB(res) {
     $('#result').html(cities);
 }
 
-
-loadCountries();
 function loadCountries() {
     $.ajax({
         url: '/country?' + $('input[name = csrf_name]').val() + "=" + $('#input[name = csrf_value]').val(),

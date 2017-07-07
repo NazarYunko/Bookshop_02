@@ -11,12 +11,12 @@ public class CityDto {
 
     private String name;
 
-    private Country country;
+    private CountryDto country;
 
     public CityDto() {
     }
 
-    public CityDto(int id, String name, Country country) {
+    public CityDto(int id, String name, CountryDto country) {
         this.id = id;
         this.name = name;
         this.country = country;
@@ -38,11 +38,11 @@ public class CityDto {
         this.name = name;
     }
 
-    public Country getCountry() {
+    public CountryDto getCountry() {
         return country;
     }
 
-    public void setCountry(Country country) {
+    public void setCountry(CountryDto country) {
         this.country = country;
     }
 }

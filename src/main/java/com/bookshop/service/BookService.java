@@ -1,5 +1,6 @@
 package com.bookshop.service;
 
+import com.bookshop.entity.Author;
 import com.bookshop.entity.Book;
 import com.bookshop.entity.User;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,5 +21,7 @@ public interface BookService {
     void delete(int id);
 
     void update(Book book, MultipartFile image);
+
+    boolean findByName(String name);
 
 }

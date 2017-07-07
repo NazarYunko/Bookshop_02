@@ -1,3 +1,5 @@
+loadCountries();
+
 function checkField(elem) {
     if ($(elem).val().length == 1) {
         $(elem).css('background', 'white');
@@ -14,7 +16,7 @@ function saveCountry() {
     var nameValue = name.val();
 
     if (nameValue == '') {
-        name.css('background', 'rgba(151, 22, 28, 0.1)')
+        name.css('background', 'rgba(151, 22, 28, 0.15)')
     }
 
     if (nameValue != '') {
@@ -100,7 +102,7 @@ function saveUpdates(countryId) {
     var nameValue = name.val();
 
     if (nameValue == '') {
-        name.css('background', 'rgba(151, 22, 28, 0.1)')
+        name.css('background', 'rgba(151, 22, 28, 0.15)')
     }
 
     if (nameValue != '') {
@@ -168,9 +170,6 @@ function deleteCountry(countryId) {
         }
     })
 }
-
-
-loadCountries();
 
 function loadCountries() {
     $.ajax({

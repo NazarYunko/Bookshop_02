@@ -11,15 +11,15 @@
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
 <script type="text/javascript" src="/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="/jQuery/jQuery3.1.1.js"></script>
-<form:form action="/login" method="post">
+<form:form action="/login" id="form" method="post">
     <div class="form-group">
         <div class="title">Sign in</div>
         <center>
-            <h4 class="hClass"></h4>
+            <h4 class="hClass">${userException}</h4>
         </center>
-        <input name="username" id="userName" class="form-control" type="text" placeholder="Login or email" required>
+        <input name="username" id="userName" class="form-control" type="text" placeholder="Login or email" oninput="checkField('#userName')">
         <br>
-        <input name="password" id="password" class="form-control" type="password" min="3" placeholder="Password" required>
+        <input name="password" id="password" class="form-control" type="password" min="3" placeholder="Password" oninput="checkField('#password')">
         <br>
         <button style="text-align: center" class="btn btn-primary btn-block">Sign in</button>
     </div>
@@ -27,3 +27,5 @@
         <p class="message">Not registered? <a class="message" href="/signup">Create an account</a></p>
     </div>
 </form:form>
+
+<script src="/js/user.js"></script>

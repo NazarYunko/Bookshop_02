@@ -15,7 +15,7 @@ public class DtoUtilMapper {
     }
 
     public static AuthorDto getFullAuthorDto(Author author) {
-        return new AuthorDto(author.getId(), author.getName(), author.getLastName(), author.getDateOfBirth(), author.getBiography(), author.getPathImage());
+        return new AuthorDto(author.getId(), author.getName(), author.getLastName(), author.getDateOfBirth(), getCityDto(author.getCity()), author.getBiography(), author.getPathImage());
     }
 
     public static List<AuthorDto> getNotFullAuthorsDto(List<Author> authors) {
@@ -27,11 +27,11 @@ public class DtoUtilMapper {
     }
 
     public static BookDto getNotFullBookDto(Book book) {
-        return new BookDto(book.getId(), book.getName(), book.getAuthor(), book.getPrice(), book.getPathImage());
+        return new BookDto(book.getId(), book.getName(), getFullAuthorDto(book.getAuthor()), book.getPrice(), book.getPathImage());
     }
 
     public static BookDto getFullBookDto(Book book) {
-        return new BookDto(book.getId(), book.getName(), book.getGenre(), book.getDescription(), book.getCountOfPages(), book.getAuthor(), book.getDateOfPublication(), book.getPublisher(), book.getPrice(), book.getQuantity(), book.getPathImage());
+        return new BookDto(book.getId(), book.getName(), getGenreDto(book.getGenre()), book.getDescription(), book.getCountOfPages(), getFullAuthorDto(book.getAuthor()), book.getDateOfPublication(), getPublisherDto(book.getPublisher()), book.getPrice(), book.getQuantity(), book.getPathImage());
     }
 
     public static List<BookDto> getNotFullBooksDto(List<Book> books) {
@@ -43,7 +43,7 @@ public class DtoUtilMapper {
     }
 
     public static CityDto getCityDto(City city) {
-        return new CityDto(city.getId(), city.getName(), city.getCountry());
+        return new CityDto(city.getId(), city.getName(), getCountryDto(city.getCountry()));
     }
 
     public static List<CityDto> getCitiesDto(List<City> cities) {
