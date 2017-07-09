@@ -36,7 +36,7 @@
         <div class="form-group size">
             <label for="bookCountOfPages">Count of pages: </label>
             <input type="number" name="countOfPages" class="form-control" id="bookCountOfPages"
-                   placeholder="Count of pages..." onkeypress="numberCheckField('#bookCountOFPages')">
+                   placeholder="Count of pages..." onkeypress="return false;" value="1" min="1" max="100000">
         </div>
         <div class="form-group size">
             <label for="authors">Author: </label>
@@ -61,20 +61,21 @@
         <div class="form-group size">
             <label for="bookQuantity">Quantity: </label>
             <input type="number" name="quantity" class="form-control" id="bookQuantity"
-                   placeholder="Quantity..." onkeypress="numberCheckField('#bookQuantity')">
+                   placeholder="Quantity..." onkeypress="return false;" value="0" min="0" max="10000000">
         </div>
         <div class="form-group size">
             <label for="bookPrice">Price: </label>
             <input type="number" name="price" class="form-control" id="bookPrice"
-                   placeholder="Price..." onkeypress="numberCheckField('#bookPrice')">
+                   placeholder="Price..." onkeypress="return false;" value="0" min="0" max="10000000">
         </div>
         <div class="form-group size">
             <label for="image">Image: </label>
-            <input type="file" class="form-control" name="image" id="image" accept="image/*"
-                   onclick="inputCheckClick('#image')"/>
+            <a id="uploadFile" class="btn btn-primary btn-md">Upload File</a>
+            <p id="file-text" style="color: red; font-weight: bold;"></p>
         </div>
         <br>
         <button class="btn btn-default btn-md">Add book</button>
+        <input type="file" style="visibility: hidden;" class="form-control" name="image" id="image" accept="image/*"/>
     </form>
     <input type="hidden" name="csrf_name"
            value="${_csrf.parameterName}"/>

@@ -12,6 +12,6 @@ $('#searchForm').submit(function (event) {
     if (searchValue == '') {
         search.css('background', 'rgba(151, 22, 28, 0.15)')
     } else {
-        $('#search').unbind('submit').submit();
+        $('#searchForm').unbind('submit').submit();
     }
 });

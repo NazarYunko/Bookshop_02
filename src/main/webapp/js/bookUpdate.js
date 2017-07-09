@@ -9,14 +9,14 @@ function checkField(elem) {
     }
 }
 
-function numberCheckField(elem) {
-    $(elem).css('background', 'white');
-}
-
 //form validation
 function inputCheckClick(elem) {
     $(elem).css('background', 'white');
 }
+
+$('#uploadFile').click(function () {
+    $('#image').click();
+});
 
 $('#updateBookForm').submit(function (event) {
     event.preventDefault();
@@ -74,8 +74,6 @@ $('#updateBookForm').submit(function (event) {
         bookQuantity.css('background', 'rgba(151, 22, 28, 0.15)');
     } else if (bookPriceValue == '') {
         bookPrice.css('background', 'rgba(151, 22, 28, 0.15)');
-    } else if (imageValue == '') {
-        image.css('background', 'rgba(151, 22, 28, 0.15)');
     } else {
 
         var book = {

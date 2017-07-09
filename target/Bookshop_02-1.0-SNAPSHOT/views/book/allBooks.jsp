@@ -22,9 +22,9 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="book" items="${books}">
+    <c:forEach var="book" items="${books.content}">
         <tr>
-            <td><a href="/books/${book.id}"><img src="${book.pathImage}" width="250px" height="325px"></a></td>
+            <td><a href="/books/${book.id}"><img src="${book.pathImage}" class="img-rounded" width="250px" height="325px"></a></td>
             <td><strong><a style="color: black; text-decoration-line: none;" href="/books/${book.id}">${book.name}</a></strong></td>
             <td><strong>${book.author.name} ${book.author.lastName}</strong></td>
             <td><strong>${book.price}</strong></td>
@@ -32,3 +32,8 @@
     </c:forEach>
     </tbody>
 </table>
+
+<div style="text-align: center;">
+    <a class="btn btn-primary btn-md" href="/books?page=${books.number}&size=${books.size}">Previous</a>
+    <a class="btn btn-primary btn-md" href="/books?page=${books.number+ 2}&size=${books.size}">Next</a>
+</div>

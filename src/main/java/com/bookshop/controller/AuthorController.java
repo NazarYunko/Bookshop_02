@@ -6,6 +6,8 @@ import com.bookshop.entity.Author;
 import com.bookshop.service.AuthorService;
 import com.bookshop.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +31,7 @@ public class AuthorController {
 
     @GetMapping("/getAuthors")
     @ResponseBody
-    public List<AuthorDto> getAllAuthors(){
+    public List<AuthorDto> getAllAuthors() {
         return DtoUtilMapper.getNotFullAuthorsDto(authorService.findAll());
     }
 
@@ -62,8 +64,8 @@ public class AuthorController {
     }
 
     @GetMapping("/authors")
-    public String allAuthors(Model model) {
-        model.addAttribute("authors", DtoUtilMapper.getNotFullAuthorsDto(authorService.findAll()));
+    public String allAuthors(Model model, @PageableDefault(value = 8) Pageable pageable) {
+        model.addAttribute("authors", authorService.findAllPages(pageable));
         return "views-author-allAuthors";
     }
 
@@ -99,7 +101,12 @@ public class AuthorController {
         author.setBiography(biography);
         author.setDateOfBirth(LocalDate.parse(dateOfBirth));
         author.setCity(cityService.findOne(cityId));
-        authorService.update(author, image);
+
+        if (image.getOriginalFilename().equals("")) {
+            authorService.update(author, image);
+        } else {
+            authorService.update(author);
+        }
         return "redirect:/authors/{id}";
     }
 

@@ -22,12 +22,18 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="author" items="${authors}">
+    <c:forEach var="author" items="${authors.content}">
         <tr>
-            <td><a href="/authors/${author.id}"><image src="${author.pathImage}" class="img-rounded" width="250" height="325"></image></a></td>
+            <td><a href="/authors/${author.id}">
+                <image src="${author.pathImage}" class="img-rounded" width="250" height="325"></image>
+            </a></td>
             <td><strong>${author.name}</strong></td>
             <td><strong>${author.lastName}</strong></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
+<div style="text-align: center;">
+    <a class="btn btn-primary btn-md" href="/authors?page=${authors.number}&size=${authors.size}">Previous</a>
+    <a class="btn btn-primary btn-md" href="/authors?page=${authors.number+ 2}&size=${authors.size}">Next</a>
+</div>

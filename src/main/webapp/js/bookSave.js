@@ -9,14 +9,18 @@ function checkField(elem) {
     }
 }
 
-function numberCheckField(elem) {
-    $(elem).css('background', 'white');
-}
-
 //form validation
 function inputCheckClick(elem) {
     $(elem).css('background', 'white');
 }
+
+$('#uploadFile').click(function () {
+   $('#image').click();
+});
+
+$('#image').change(function () {
+    $('#file-text').html('File uploaded!');
+});
 
 //form validation
 $('#saveBookForm').submit(function (event) {
@@ -75,7 +79,7 @@ $('#saveBookForm').submit(function (event) {
     } else if (bookPriceValue == '') {
         bookPrice.css('background', 'rgba(151, 22, 28, 0.15)');
     } else if (imageValue == '') {
-        image.css('background', 'rgba(151, 22, 28, 0.15)');
+        $('#file-text').html('Choose file!');
     } else {
 
         $.ajax({

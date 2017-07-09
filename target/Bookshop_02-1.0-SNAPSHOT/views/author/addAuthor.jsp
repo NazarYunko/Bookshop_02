@@ -46,10 +46,12 @@
         </div>
         <div class="form-group size">
             <label for="image">Image: </label>
-            <input type="file" class="form-control" name="image" id="image" accept="image/*" onclick="inputCheckClick('#image')" />
+            <a id="uploadFile" class="btn btn-primary btn-md">Upload File</a>
+            <p id="file-text" style="color: red; font-weight: bold;"></p>
         </div>
         <br>
         <button class="btn btn-default btn-md">Add author</button>
+        <input type="file" class="form-control" style="visibility: hidden;" name="image" id="image" accept="image/*" />
     </form>
     <input type="hidden" name="csrf_name"
            value="${_csrf.parameterName}"/>

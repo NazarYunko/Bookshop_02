@@ -11,6 +11,10 @@ function inputCheckClick(elem) {
     $(elem).css('background', 'white');
 }
 
+$('#uploadFile').click(function () {
+    $('#image').click();
+});
+
 //update author form validation
 $('#updateAuthorForm').submit(function (event) {
 
@@ -53,8 +57,6 @@ $('#updateAuthorForm').submit(function (event) {
     } else if (selectCities.has('option').length == 0) {
         $('#countries').css('background', 'rgba(151, 22, 28, 0.15)');
         $('#error').html('Add cities to country!');
-    } else if (imageValue == '') {
-        image.css('background', 'rgba(151, 22, 28, 0.15)');
     } else {
         var authorSend = {
             id: $('#authorId').val(),

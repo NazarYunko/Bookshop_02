@@ -14,6 +14,14 @@ function inputCheckClick(elem) {
     $(elem).css('background', 'white');
 }
 
+$('#uploadFile').click(function () {
+    $('#image').click();
+});
+
+$('#image').change(function () {
+    $('#file-text').html('File uploaded!');
+});
+
 //save form validation
 $('#saveAuthorForm').submit(function (event) {
     event.preventDefault();
@@ -56,7 +64,7 @@ $('#saveAuthorForm').submit(function (event) {
         $('#cities').css('background', 'rgba(151, 22, 28, 0.15)');
         $('#error').html('Add cities to country!');
     } else if (imageValue == '') {
-        image.css('background', 'rgba(151, 22, 28, 0.15)');
+        $('#file-text').css('background', 'rgba(151, 22, 28, 0.15)');
     } else {
         $.ajax({
             url: '/getAuthors?' + $('input[name = csrf_name]').val() + "=" + $('input[name = csrf_value]').val(),

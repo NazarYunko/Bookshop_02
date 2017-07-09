@@ -5,6 +5,8 @@ import com.bookshop.entity.Author;
 import com.bookshop.service.AuthorService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -75,6 +77,11 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
+    public void update(Author author) {
+        authorDao.save(author);
+    }
+
+    @Override
     public Author findByNameAndLastName(String name, String lastName) {
         return authorDao.findByNameAndLastName(name, lastName);
     }
@@ -92,5 +99,9 @@ public class AuthorServiceImpl implements AuthorService {
         }
     }
 
+    @Override
+    public Page<Author> findAllPages(Pageable pageable) {
+        return authorDao.findAll(pageable);
+    }
 
 }

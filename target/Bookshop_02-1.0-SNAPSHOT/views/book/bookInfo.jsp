@@ -21,7 +21,6 @@
         <div class="col-md-9 col-lg-9" style="margin-top: -2%">
             <h2 style="color: #444444; text-align: left;">${book.name}</h2>
             <div class="text-size">Genre: ${book.genre.name}</div>
-            <div class="text-size">Description: ${book.description}</div>
             <div class="text-size">Count of pages: ${book.countOfPages}</div>
             <div class="text-size">Author: ${book.author.name} ${book.author.lastName}</div>
             <div class="text-size">Publisher: ${book.publisher.name}</div>

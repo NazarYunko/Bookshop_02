@@ -21,11 +21,14 @@
     </tr>
     </thead>
     <tbody>
+    <c:forEach var="book" items="${books}">
         <tr>
             <td><a href="/books/${book.id}"><img src="${book.pathImage}" width="250px" height="325px"></a></td>
-            <td><strong><a style="color: black; text-decoration-line: none;" href="/books/${book.id}">${book.name}</a></strong></td>
+            <td><strong><a style="color: black; text-decoration-line: none;"
+                           href="/books/${book.id}">${book.name}</a></strong></td>
             <td><strong>${book.author.name} ${book.author.lastName}</strong></td>
             <td><strong>${book.price}</strong></td>
         </tr>
+    </c:forEach>
     </tbody>
 </table>

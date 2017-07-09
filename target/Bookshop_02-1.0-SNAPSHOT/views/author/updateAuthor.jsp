@@ -10,32 +10,39 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <link rel="stylesheet" href="/css/author/author.css">
 <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
 <script type="text/javascript" src="/jQuery/jQuery3.1.1.js"></script>
 
 <div class="author-form" id="authorUpdate">
-    <form action="/updateauthor/${currentAuthor.id}?${_csrf.parameterName}=${_csrf.token}" id="updateAuthorForm" method="post" enctype="multipart/form-data">
+    <form action="/updateauthor/${currentAuthor.id}?${_csrf.parameterName}=${_csrf.token}" id="updateAuthorForm"
+          method="post" enctype="multipart/form-data">
         <h1>Update author</h1>
         <br>
         <p style="color: red; font-size: 16px;" id="error"></p>
         <div class="form-group size">
             <input type="hidden" value="${currentAuthor.id}" id="authorId">
-            <input type="text" class="form-control" id="authorName" name="name" placeholder="Author name..." oninput="checkField('#authorName')" value="${currentAuthor.name}">
+            <input type="text" class="form-control" id="authorName" name="name" placeholder="Author name..."
+                   oninput="checkField('#authorName')" value="${currentAuthor.name}">
         </div>
         <div class="form-group size">
-            <input type="text" class="form-control" id="authorLastName" name="lastName" placeholder="Author last name..." oninput="checkField('#authorLastName')" value="${currentAuthor.lastName}">
+            <input type="text" class="form-control" id="authorLastName" name="lastName"
+                   placeholder="Author last name..." oninput="checkField('#authorLastName')"
+                   value="${currentAuthor.lastName}">
         </div>
         <div class="form-group size">
-            <textarea name="biography" class="form-control" id="authorBiography" style="resize: none;" cols="30" rows="10" placeholder="Biography..." oninput="checkField('#authorBiography')">${currentAuthor.biography}</textarea>
+            <textarea name="biography" class="form-control" id="authorBiography" style="resize: none;" cols="30"
+                      rows="10" placeholder="Biography..."
+                      oninput="checkField('#authorBiography')">${currentAuthor.biography}</textarea>
         </div>
         <br>
         <div class="form-group size">
             <label for="authorDateOfBirth">Date of birth: </label>
-            <input type="date" class="form-control" id="authorDateOfBirth" name="dateOfBirth" onclick="inputCheckClick('#authorDateOfBirth')" value="${currentAuthor.dateOfBirth}">
+            <input type="date" class="form-control" id="authorDateOfBirth" name="dateOfBirth"
+                   onclick="inputCheckClick('#authorDateOfBirth')" value="${currentAuthor.dateOfBirth}">
         </div>
         <br>
-        <div class="form-group size" id="selects" >
+        <div class="form-group size" id="selects">
             <label for="countries">Country: </label>
             <select name="countryId" id="countries" class="form-control" onchange="checkField('#countries')">
 
@@ -48,10 +55,13 @@
         </div>
         <div class="form-group size">
             <label for="image">Image: </label>
-            <input type="file" class="form-control"  name="image" id="image" accept="image/*" onclick="inputCheckClick('#image')"/>
+            <a id="uploadFile" class="btn btn-primary btn-md">Upload new File</a>
+            <p id="file-text" style="color: blue; font-weight: bold;">File uploaded</p>
         </div>
         <br>
         <button class="btn btn-default btn-md">Add author</button>
+        <input type="file" class="form-control" style="visibility: hidden;" name="image" id="image" accept="image/*"/>
+
     </form>
     <input type="hidden" name="csrf_name"
            value="${_csrf.parameterName}"/>

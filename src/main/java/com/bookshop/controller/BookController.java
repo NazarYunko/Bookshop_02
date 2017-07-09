@@ -1,5 +1,6 @@
 package com.bookshop.controller;
 
+import com.bookshop.dto.BookDto;
 import com.bookshop.dto.DtoUtilMapper;
 import com.bookshop.entity.Book;
 import com.bookshop.service.AuthorService;
@@ -7,12 +8,15 @@ import com.bookshop.service.BookService;
 import com.bookshop.service.GenreService;
 import com.bookshop.service.PublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Created by Study on 10.06.2017.
@@ -45,6 +49,12 @@ public class BookController {
     }
 
 
+    @GetMapping("/findNewBooks")
+    @ResponseBody
+    public List<BookDto> findNewBooks() {
+        return DtoUtilMapper.getNotFullBooksDto(bookService.findNewBooks());
+    }
+
     @GetMapping("/addbook")
     public String addBook() {
         return "views-book-addBook";
@@ -70,8 +80,8 @@ public class BookController {
     }
 
     @GetMapping("/books")
-    public String allBooks(Model model) {
-        model.addAttribute("books", DtoUtilMapper.getNotFullBooksDto(bookService.findAll()));
+    public String allBooks(Model model, @PageableDefault(value = 8) Pageable pageable) {
+        model.addAttribute("books", bookService.findAllPages(pageable));
         return "views-book-allBooks";
     }
 
@@ -115,7 +125,12 @@ public class BookController {
         book.setDateOfPublication(LocalDate.parse(dateOfPublication));
         book.setQuantity((int) quantity);
         book.setPrice(price);
-        bookService.update(book, image);
+
+        if (image.getOriginalFilename().equals("")) {
+            bookService.update(book);
+        } else {
+            bookService.update(book, image);
+        }
         return "redirect:/books";
     }
 

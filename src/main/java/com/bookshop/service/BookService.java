@@ -2,7 +2,9 @@ package com.bookshop.service;
 
 import com.bookshop.entity.Author;
 import com.bookshop.entity.Book;
-import com.bookshop.entity.User;
+import com.bookshop.entity.Genre;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -20,6 +22,8 @@ public interface BookService {
 
     void delete(int id);
 
+    void update(Book book);
+
     void update(Book book, MultipartFile image);
 
     boolean findByName(String name);
@@ -27,4 +31,12 @@ public interface BookService {
     Book findBookByName(String name);
 
     boolean findByIdAndName(int id, String name);
+
+    List<Book> findBooksByAuthor(Author author);
+
+    List<Book> findBooksByGenre(Genre genre);
+
+    Page<Book> findAllPages(Pageable pageable);
+
+    List<Book> findNewBooks();
 }

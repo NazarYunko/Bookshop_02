@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css"/>
@@ -14,7 +14,8 @@
 <script type="text/javascript" src="/jQuery/jQuery3.1.1.js"></script>
 <link rel="stylesheet" href="/css/book/book.css">
 <div class="book-form">
-    <form action="/updatebook/${currentBook.id}?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data"
+    <form action="/updatebook/${currentBook.id}?${_csrf.parameterName}=${_csrf.token}" method="post"
+          enctype="multipart/form-data"
           id="updateBookForm">
         <h1 class="hClass">Update book</h1>
         <p style="color: red; font-size: 16px;" id="error"></p>
@@ -32,12 +33,15 @@
         </div>
         <div class="form-group size">
             <textarea name="description" class="form-control" id="bookDescription" style="resize: none;" cols="30"
-                      rows="10" placeholder="Description..." oninput="checkField('#bookDescription')">${currentBook.description}</textarea>
+                      rows="10" placeholder="Description..."
+                      oninput="checkField('#bookDescription')">${currentBook.description}</textarea>
         </div>
         <div class="form-group size">
             <label for="bookCountOfPages">Count of pages: </label>
             <input type="number" name="countOfPages" class="form-control" id="bookCountOfPages"
-                   placeholder="Count of pages..." onkeypress="numberCheckField('#bookCountOFPages')" value="${currentBook.countOfPages}">
+                   placeholder="Count of pages..." onkeypress="return false;" value="${currentBook.countOfPages}"
+                   min="1" max="100000"
+                   value="${currentBook.countOfPages}">
         </div>
         <div class="form-group size">
             <label for="authors">Author: </label>
@@ -62,20 +66,24 @@
         <div class="form-group size">
             <label for="bookQuantity">Quantity: </label>
             <input type="number" name="quantity" class="form-control" id="bookQuantity"
-                   placeholder="Quantity..." onkeypress="numberCheckField('#bookQuantity')" value="${currentBook.quantity}">
+                   placeholder="Quantity..." onkeypress="return false;" value="${currentBook.quantity}" min="0"
+                   max="10000000"
+                   value="${currentBook.quantity}">
         </div>
         <div class="form-group size">
             <label for="bookPrice">Price: </label>
             <input type="number" name="price" class="form-control" id="bookPrice"
-                   placeholder="Price..." onkeypress="numberCheckField('#bookPrice')" value="${currentBook.price}">
+                   placeholder="Price..." onkeypress="return false;" value="${currentBook.price}" min="0" max="10000000"
+                   value="${currentBook.price}">
         </div>
         <div class="form-group size">
             <label for="image">Image: </label>
-            <input type="file" class="form-control" name="image" id="image" accept="image/*"
-                   onclick="inputCheckClick('#image')"/>
+            <a id="uploadFile" class="btn btn-primary btn-md">Upload new File</a>
+            <p id="file-text" style="color: blue; font-weight: bold;">File uploaded</p>
         </div>
         <br>
         <button class="btn btn-default btn-md">Update book</button>
+        <input type="file" style="visibility: hidden" class="form-control" name="image" id="image" accept="image/*"/>
     </form>
     <input type="hidden" name="csrf_name"
            value="${_csrf.parameterName}"/>

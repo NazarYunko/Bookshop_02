@@ -35,11 +35,6 @@ public class UserController {
     @Autowired
     private OrdersService ordersService;
 
-    @GetMapping("/findUsers")
-    public @ResponseBody List<UserDto> findAllUsers() {
-        return DtoUtilMapper.getUsersDto(userService.findAll());
-    }
-
     @GetMapping("/signup")
     public String signUp() {
         return "views-user-signUp";

@@ -3,14 +3,18 @@ package com.bookshop.serviceImpl;
 import com.bookshop.dao.BookDao;
 import com.bookshop.entity.Author;
 import com.bookshop.entity.Book;
+import com.bookshop.entity.Genre;
 import com.bookshop.service.BookService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -83,6 +87,11 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public void update(Book book) {
+        bookDao.save(book);
+    }
+
+    @Override
     public boolean findByName(String name) {
         if (bookDao.findByName(name) == null) {
             return true;
@@ -107,5 +116,35 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book findBookByName(String name) {
         return bookDao.findByName(name);
+    }
+
+    @Override
+    public List<Book> findBooksByAuthor(Author author) {
+        return bookDao.findBooksByAuthor(author);
+    }
+
+    @Override
+    public List<Book> findBooksByGenre(Genre genre) {
+        return bookDao.findBooksByGenre(genre);
+    }
+
+    @Override
+    public Page<Book> findAllPages(Pageable pageable) {
+        return bookDao.findAll(pageable);
+    }
+
+    @Override
+    public List<Book> findNewBooks() {
+        List<Book> newBooks = new ArrayList<>();
+        List<Book> foundBook = bookDao.findNewBooks();
+
+        if (foundBook.size() < 20) {
+            newBooks.addAll(foundBook);
+        } else {
+            for (int i = 0; i < 20; i++) {
+                newBooks.add(foundBook.get(i));
+            }
+        }
+        return newBooks;
     }
 }
